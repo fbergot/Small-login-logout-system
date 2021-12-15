@@ -1,11 +1,11 @@
 const passport = require("passport");
-const Connect = require('../../models/database/Connect');
-const UserModel = require('../../models/UserModel');
-const MakeBcrypt = require("../../models/bcrypt/MakeBcrypt");
+const Connect = require('../../class/database/Connect');
+const UserModel = require('../../class/UserModel');
+const MakeBcrypt = require("../../class/bcrypt/MakeBcrypt");
 const usermodelInstance = new UserModel(Connect._getInstance());
 const makeBcryptInstance = MakeBcrypt._getInstance();
-const VerifData = require('../../models/utilitary/VerifData');
-const messageUser = require('../../models/utilitary/messageUser');
+const VerifData = require('../../class/utilitary/VerifData');
+const messageUser = require('../../class/utilitary/messageUser');
 
 
 

@@ -1,7 +1,7 @@
 require('dotenv').config({ path: "./config/.env" });
 
-const Connect = require('./models/database/Connect');
-const UserModel = require('./models/UserModel');
+const Connect = require('./class/database/Connect');
+const UserModel = require('./class/UserModel');
 const usermodel = new UserModel(Connect._getInstance());
 const router = require('./router/router').router;
 const express = require("express");
@@ -11,7 +11,7 @@ const initializePassport = require('./config/passport-config');
 const flash = require('express-flash');
 const session = require('express-session');
 const methodOveride = require('method-override');
-const messageForUser = require('./models/utilitary/messageUser');
+const messageForUser = require('./class/utilitary/messageUser');
 
 // init passport
 initializePassport(passport, email => {
